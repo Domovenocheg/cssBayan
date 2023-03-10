@@ -4,10 +4,111 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="resets.css" />
+    <link rel="stylesheet" href="normalizes.css" />
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
   <body>
-    Hello world
+    <div class="wrapper">
+      <h1 class="title">CSS BAYAN</h1>
+      <div class="accordion">
+        <div class="accordion-item box-1">
+          <input
+            class="accordion-item__input"
+            type="radio"
+            name="accordion"
+            id="accordion-1"
+            checked
+          />
+          <label class="accordion-item__trigger" for="accordion-1"
+            >"Пойдём в горы" говорили они!
+          </label>
+          <div class="accordion-item__content">
+            <img
+              src="cat.jpg"
+              class="accordion-item__content__img img"
+              alt="cat"
+            />
+          </div>
+        </div>
+
+        <div class="accordion-item box-2">
+          <input
+            class="accordion-item__input"
+            type="radio"
+            name="accordion"
+            id="accordion-2"
+          />
+          <label class="accordion-item__trigger" for="accordion-2"
+            >Нельзя просто так взять и пойти в горы!
+          </label>
+          <div class="accordion-item__content">
+            <img
+              src="nelzya.jpg"
+              class="accordion-item__content__img img"
+              alt="nelzya"
+            />
+          </div>
+        </div>
+
+        <div class="accordion-item box-3">
+          <input
+            class="accordion-item__input"
+            type="radio"
+            name="accordion"
+            id="accordion-3"
+          />
+          <label class="accordion-item__trigger" for="accordion-3"
+            >Пап, а можно к нам альпинисты придут в гости?
+          </label>
+          <div class="accordion-item__content">
+            <img
+              src="papmozhno.JPG"
+              class="accordion-item__content__img img"
+              alt="papmozhno"
+            />
+          </div>
+        </div>
+
+        <div class="accordion-item box-4">
+          <input
+            class="accordion-item__input"
+            type="radio"
+            name="accordion"
+            id="accordion-4"
+          />
+          <label class="accordion-item__trigger" for="accordion-4"
+            >Сложно, я в горы!
+          </label>
+          <div class="accordion-item__content">
+            <img
+              src="slozhno.jpg"
+              class="accordion-item__content__img img"
+              alt="slozhno"
+            />
+          </div>
+        </div>
+
+        <div class="accordion-item box-5">
+          <input
+            class="accordion-item__input"
+            type="radio"
+            name="accordion"
+            id="accordion-5"
+          />
+          <label class="accordion-item__trigger" for="accordion-5"
+            >Как сильны мои лапищи!
+          </label>
+          <div class="accordion-item__content">
+            <img
+              src="volchara.jpg"
+              class="accordion-item__content__img img"
+              alt="volchara"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
