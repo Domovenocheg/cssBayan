@@ -9,6 +9,7 @@ body {
   max-width: 1000px;
   margin: 0 auto;
 }
+
 .title {
   font-size: 3.2rem;
   font-weight: 600;
@@ -17,7 +18,12 @@ body {
 .accordion {
   display: grid;
   grid-template-rows: min-content repeat(5, min-content);
+  color: rgb(29, 107, 223);
 }
+.accordion:hover {
+  color: black;
+}
+
 .box-1 {
   grid-row: 2/3;
   -webkit-box-shadow: 0px 7px 0px -5px rgba(0, 76, 135, 0.6) inset;
@@ -49,6 +55,33 @@ body {
   box-shadow: 0px 7px 0px -5px rgba(0, 76, 135, 0.6) inset;
 }
 
+.label-cross {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  cursor: pointer;
+}
+
+.cross {
+  display: block;
+  padding: 2rem;
+  cursor: pointer;
+  font-size: 3rem;
+  font-weight: 600;
+  opacity: 0;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  justify-self: end;
+  transition: 0.3s all;
+}
+.accordion:hover .accordion-item .label-cross .cross {
+  opacity: 100;
+}
+
+.accordion-item__input:checked ~ .label-cross .cross {
+  transform: rotate(45deg);
+}
+
 .accordion-item__input {
   position: absolute;
   top: 0;
@@ -61,21 +94,35 @@ body {
   cursor: pointer;
   font-size: 2.2rem;
   font-weight: 600;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  z-index: 5;
+  transition: 0.3s all;
 }
 
 .accordion-item__content {
   border-top: none;
   display: none;
+  transition: 0.3s all;
 }
 
-.accordion-item__input:checked ~ .accordion-item__trigger {
+.accordion-item__input:checked ~ .label-cross {
+  color: black;
 }
 .accordion-item__input:checked ~ .accordion-item__content {
   display: block;
   text-align: center;
 }
+.label-cross:hover ~ .accordion-item__content {
+  display: block;
+  text-align: center;
+}
+.accordion-item__content:hover {
+  display: block;
+  text-align: center;
+}
 
 .img {
-  width: 50%;
+  width: 37%;
   margin-bottom: 10px;
 }
