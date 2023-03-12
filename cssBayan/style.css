@@ -116,12 +116,17 @@ body {
   display: block;
   text-align: center;
 }
+.label-cross:hover .cross {
+  transform: rotate(45deg);
+}
 
 .img {
-  width: 37%;
+  width: 40rem;
+  height: 35rem;
   margin-bottom: 1rem;
   animation-name: imgimg;
-  animation-duration: 0.5s;
+  animation-duration: 1.5s;
+  object-fit: contain;
 }
 
 @keyframes imgimg {
@@ -162,7 +167,8 @@ body {
     margin: 0 auto;
   }
   .img {
-    width: 40%;
+    width: 60%;
+    height: 30rem;
   }
 }
 
@@ -175,6 +181,7 @@ body {
     margin: 0 auto;
   }
   .img {
-    width: 60%;
+    width: 80%;
+    height: 20rem;
   }
 }
