@@ -167,7 +167,7 @@ body {
     margin: 0 auto;
   }
   .img {
-    width: 60%;
+    width: 90%;
     height: 30rem;
   }
 }
@@ -181,7 +181,15 @@ body {
     margin: 0 auto;
   }
   .img {
-    width: 80%;
+    width: 90%;
     height: 20rem;
+  }
+}
+@media (hover: none) {
+  .accordion {
+    color: black;
+  }
+  .cross {
+    opacity: 100;
   }
 }
