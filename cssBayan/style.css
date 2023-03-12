@@ -1,0 +1,195 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: #eee;
+}
+
+.title {
+  font-size: 3.2rem;
+  font-weight: 600;
+}
+
+.accordion {
+  display: grid;
+  grid-template-rows: min-content repeat(5, min-content);
+  color: rgb(29, 107, 223);
+}
+.accordion:hover {
+  color: black;
+}
+
+.box-1 {
+  grid-row: 2/3;
+  -webkit-box-shadow: 0rem 0.7rem 0rem -0.5rem rgba(0, 76, 135, 0.6) inset;
+  -moz-box-shadow: 0rem 0.7rem 0rem -0.5rem rgba(0, 76, 135, 0.6) inset;
+  box-shadow: 0rem 0.7rem 0rem -0.5rem rgba(0, 76, 135, 0.6) inset;
+}
+.box-2 {
+  grid-row: 3/4;
+  -webkit-box-shadow: 0rem 0.7rem 0rem -0.5rem rgba(0, 76, 135, 0.6) inset;
+  -moz-box-shadow: 0rem 0.7rem 0rem -0.5rem rgba(0, 76, 135, 0.6) inset;
+  box-shadow: 0rem 0.7rem 0rem -0.5rem rgba(0, 76, 135, 0.6) inset;
+}
+.box-3 {
+  grid-row: 4/5;
+  -webkit-box-shadow: 0rem 0.7rem 0rem -0.5rem rgba(0, 76, 135, 0.6) inset;
+  -moz-box-shadow: 0rem 0.7rem 0rem -0.5rem rgba(0, 76, 135, 0.6) inset;
+  box-shadow: 0rem 0.7rem 0rem -0.5rem rgba(0, 76, 135, 0.6) inset;
+}
+.box-4 {
+  grid-row: 5/6;
+  -webkit-box-shadow: 0rem 0.7rem 0rem -0.5rem rgba(0, 76, 135, 0.6) inset;
+  -moz-box-shadow: 0rem 0.7rem 0rem -0.5rem rgba(0, 76, 135, 0.6) inset;
+  box-shadow: 0rem 0.7rem 0rem -0.5rem rgba(0, 76, 135, 0.6) inset;
+}
+.box-5 {
+  grid-row: 6/7;
+  -webkit-box-shadow: 0rem 0.7rem 0rem -0.5rem rgba(0, 76, 135, 0.6) inset;
+  -moz-box-shadow: 0rem 0.7rem 0rem -0.5rem rgba(0, 76, 135, 0.6) inset;
+  box-shadow: 0rem 0.7rem 0rem -0.5rem rgba(0, 76, 135, 0.6) inset;
+}
+
+.label-cross {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.cross {
+  display: block;
+  padding: 2rem;
+  font-size: 3rem;
+  font-weight: 600;
+  opacity: 0;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  justify-self: end;
+  transition: 0.6s all;
+}
+.accordion:hover .accordion-item .label-cross .cross {
+  opacity: 100;
+}
+
+.accordion-item__input:checked ~ .label-cross .cross {
+  transform: rotate(45deg);
+}
+
+.accordion-item__input {
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+}
+.accordion-item__trigger {
+  display: block;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-right: 3rem;
+  font-size: 2.2rem;
+  font-weight: 600;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  z-index: 5;
+  transition: 0.3s all;
+}
+
+.accordion-item__content {
+  border-top: none;
+  display: none;
+  cursor: pointer;
+}
+
+.accordion-item__input:checked ~ .label-cross {
+  color: black;
+}
+
+.accordion-item__input:checked ~ .accordion-item__content {
+  display: block;
+  text-align: center;
+}
+
+.label-cross:hover ~ .accordion-item__content {
+  display: block;
+  text-align: center;
+}
+.accordion-item__content:hover {
+  display: block;
+  text-align: center;
+}
+.label-cross:hover .cross {
+  transform: rotate(45deg);
+}
+
+.img {
+  width: 40rem;
+  height: 35rem;
+  margin-bottom: 1rem;
+  animation-name: imgimg;
+  animation-duration: 1.5s;
+  object-fit: contain;
+}
+
+@keyframes imgimg {
+  0% {
+    opacity: 0;
+    scale: 0.1;
+  }
+  100% {
+    opacity: 100%;
+    scale: 1;
+  }
+}
+@media screen and (max-width: 2000px) {
+  .wrapper {
+    max-width: 60vw;
+    margin: 0 auto;
+  }
+  .label-cross {
+    cursor: pointer;
+  }
+  .cross {
+    cursor: pointer;
+  }
+  .accordion-item__trigger {
+    cursor: pointer;
+  }
+  .accordion-item__content {
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  html {
+    font-size: 57.5%;
+  }
+  .wrapper {
+    max-width: 80vw;
+    margin: 0 auto;
+  }
+  .img {
+    width: 90%;
+    height: 30rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 53.5%;
+  }
+  .wrapper {
+    max-width: 95vw;
+    margin: 0 auto;
+  }
+  .img {
+    width: 90%;
+    height: 20rem;
+  }
+}
+@media (hover: none) {
+  .accordion {
+    color: black;
+  }
+  .cross {
+    opacity: 100;
+  }
+}
